@@ -51,7 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.libphonenumber.android)
+    implementation (libs.tecorbcountrycodepicker)
 
-    implementation(project(":TecOrbCountryCodePicker"))
 
 }

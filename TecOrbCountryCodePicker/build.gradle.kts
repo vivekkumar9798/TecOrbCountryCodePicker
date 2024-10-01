@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish") // Required for publishing
+
 }
 
 android {
@@ -37,8 +39,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
 
+}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -50,3 +52,45 @@ dependencies {
     implementation(libs.libphonenumber.android)
 
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                // Explicitly declare the AAR artifact
+                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+                groupId = "com.github.vivekkumar9798"
+                artifactId = "TecOrbCountryCodePicker"
+                version = "1.0.0"
+
+                pom {
+                    name.set("TecOrbCountryCodePicker")
+                    description.set("A customizable Android library for selecting country codes in your app.")
+                    url.set("https://github.com/vivekkumar9798/TecOrbCountryCodePicker")
+
+                    licenses {
+                        license {
+                            name.set("The Apache License, Version 2.0")
+                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.set("vivekkumar9798")
+                            name.set("Vivek Kumar")
+                            email.set("vivek2022@tecorb.co")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git:git://github.com/vivekkumar9798/TecOrbCountryCodePicker.git")
+                        developerConnection.set("scm:git:ssh://github.com:vivekkumar9798/TecOrbCountryCodePicker.git")
+                        url.set("https://github.com/vivekkumar9798/TecOrbCountryCodePicker")
+                    }
+                }
+            }
+        }
+    }
+}
+
