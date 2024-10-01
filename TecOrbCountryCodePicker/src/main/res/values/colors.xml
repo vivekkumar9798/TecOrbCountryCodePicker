@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="defaultTextColor">@android:color/black</color>
+    <color name="colorWhite">#fff</color>
+  <color name="colorFedWhite">#CECFCF</color>
+    <color name="colorAccent">#111111</color>
+
+</resources>
