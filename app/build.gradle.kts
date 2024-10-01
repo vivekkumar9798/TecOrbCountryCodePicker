@@ -30,7 +30,6 @@ android {
     buildFeatures{
         viewBinding = true
         buildConfig = true
-        compose=true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -51,7 +50,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.libphonenumber.android)
-    implementation (libs.tecorbcountrycodepicker)
 
 
 }

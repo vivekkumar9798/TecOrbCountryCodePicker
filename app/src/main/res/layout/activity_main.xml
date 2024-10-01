@@ -7,26 +7,5 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.tecorb.tecorbcountrycodepicker.TecOrbCountryCodePicker
-        android:id="@+id/view_ccp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        app:ccp_arrowSize="16dp"
-        app:ccp_backgroundColor="#111111"
-        app:ccp_dialogTextColor="@color/colorWhite"
-        app:ccp_enableHint="true"
-        app:ccp_enablePhoneAutoFormatter="false"
-        app:ccp_hideNameCode="true"
-        app:ccp_keyboardAutoPopOnSearch="false"
-        app:ccp_setCountryByTimeZone="true"
-        app:ccp_showFlag="false"
-        app:ccp_textColor="@color/colorWhite"
-        app:ccp_textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
